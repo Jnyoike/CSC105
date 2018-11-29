@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title> Outing Club</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="stylesheet" href="CSS/main.css"/>
+
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+	<h1 align="center">Smith College Outing Club</h1>
+	<div class="navbar" id="NavBar">
+		<a href="index.html">Home</a>
+		<a href="about.html">About Us</a>
+		<a href="calendar.html">Calendar</a>
+		<a href="concinnity.html">Concinnity</a>
+		<a href="javascript:void(0);" class="icon" onclick="navBarResponse()">
+    		<i class="fa fa-bars"></i>
+ 		 </a>	
+	</div>
+	<div class="container">
+		<div class="intro">
+			<div class="intro-text text-center backgrnd p-3 rounded">
+				<h2>
+					<span class="section-heading-upper hgg">
+						Introduction
+					</span>
+				</h2>
+				<p>
+					Welcome to the Smith College Outing Club website! Browse photos, upcoming events, and club history to get to know what makes the Outing Club unique here at Smith.
+				</p>
+				<p>
+					The Smith College Outing Club finds ways to bring Smith students together through enjoying the great outdoors. </p>
+					<p>From coordinating hikes with other organizations to hosting our annual <a href="concinnity.html">Concinnity Festival</a>.
+					</p><p>The Outing Club prides itself on creating a safe, diverse, and fun community full of people who enjoy spending time outside.
+				</p>
+				<p>
+					If you have any questions about the club, feel free to send us an email or check out our social media pages under<a href="#contact"> Contact Us</a>
+				</p>
+				
+			</div>
+		</div>
+		<!---->
+		<div class="slideshow-container rounded backgrnd">
+			<img class="myPhotos" src="images/img1.jpg" style="width: 100%">
+			<img class="myPhotos" src="images/img2.jpg" style="width: 100%">
+			<img class="myPhotos" src="images/img3.jpg" style="width: 100%">
+			<img class="myPhotos" src="images/img4.jpg" style="width: 100%">
+			<img class="myPhotos" src="images/img6.jpg" style="width: 100%">
+			<img class="myPhotos" src="images/img7.jpg" style="width: 100%">
+			<img class="myPhotos" src="images/img8.jpg" style="width: 100%">
+			<img class="myPhotos" src="images/img9.jpg" style="width: 100%">
+			<img class="myPhotos" src="images/img10.jpg" style="width: 100%">
+
+ 			<a class="prev" onclick="plusPhotos(-1)">&#10094;</a>
+  			<a class="next" onclick="plusPhotos(1)">&#10095;</a>
+		</div>
+		<div class="text-center backgrnd" id="trip">
+			<p>
+				 GET TO KNOW THE OUTING CLUB: OUTING CLUB CAMPING TRIP!
+			</p>
+			<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsmithcollege%2Fvideos%2F10154874876736513%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+
+		</div>
+
+		<div class="m-5 text-center pad backgrnd" id="contact">
+        <h1 class="section-heading-upper">Contact Us</h1>
+        <p>If you have any questions about the Smith Outing Club or any of our events, feel free to reach out to us!</p>
+        <h5>Primary Email:</h5>
+        <h6>Smith Outing Club</h6>
+        <a href="outingclub@smith.edu">outingclub@smith.edu</a>
+        <p>Please use this email for any questions or concerns you might have about us!</p>
+
+        <h6>Club President: Hanxiao Lu</h6>
+        <a href="hlu@smith.edu">hlu@smith.edu</a>
+
+        <h6>Primary Contact: Olivia Cooper</h6>
+        <a href=" ocooper@smith.edu"> ocooper@smith.edu</a>
+
+    </div>
+    <div class="m-5 text-center pad backgrnd" id="contact">
+        <h5>Smith Outing Club Officers:</h5>
+        <ul>
+            <li>Treasurer: Melika Hossain</li>
+            <li>Vice-Presidents: Ibuki Sugiura, Rebecca Wang</li>
+            <li>Hiking VPs: April Hopcroft, Rebecca Wang</li>
+            <li>Biking VP: Sakina Ali</li>
+            <li>Graphic Design VP: Charlotte Rubel</li>
+            <li>Graphic Design Collaborators: Claire Jordan, Sofie Koonce</li>
+        </ul>
+    </div>
+
+<div class="m-5 text-center pad backgrnd">
+    <h5>Find us on Social Media:</h5>
+    <a class="btn btn-primary" href="https://www.facebook.com/smithcollegeoutingclub" role="button" target="_blank">Facebook</a>
+    <a class="btn btn-success" href="https://smith.campuslabs.com/engage/organization/outingclub" role="button" target="_blank">Smith Social Network</a>
+    <a class="btn btn-danger" href="https://www.instagram.com/smithcollegeoutingclub/?hl=en" role="button" target="_blank">Instagram</a>
+</div>
+
+	</div>
+	<script type="text/javascript">
+		function navBarResponse() {
+		    var element = document.getElementById("NavBar");
+		    if (element.className === "navbar") {
+		        element.className += " responsive";
+		    } else {
+		        element.className = "navbar";
+		    }
+		}
+		var slideIndex = 1;
+		showPhotos(slideIndex);
+
+		function plusPhotos(n) {
+		  showPhotos(slideIndex += n);
+		}
+		function currentPhoto(n) {
+  			showPhotos(slideIndex = n);
+		}
+		function showPhotos(n) {
+		  var i;
+		  var photo = document.getElementsByClassName("myPhotos");
+		  if (n > photo.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = photo.length}
+		  for (i = 0; i < photo.length; i++) {
+		     photo[i].style.display = "none";  
+		  }
+		  photo[slideIndex-1].style.display = "block";  
+		}
+	</script>
+</body>
+</html>

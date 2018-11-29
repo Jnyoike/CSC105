@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title> Outing Club</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="stylesheet" href="CSS/main.css"/>
+
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+	<h1 align="center">Smith College Outing Club</h1>
+	<div class="navbar" id="NavBar">
+		<a href="index.html">Home</a>
+		<a href="about.html">About Us</a>
+		<a href="calendar.html">Calendar</a>
+		<a href="concinnity.html">Concinnity</a>
+		<a href="javascript:void(0);" class="icon" onclick="navBarResponse()">
+    		<i class="fa fa-bars"></i>
+ 		 </a>	
+	</div>
+	<div class="calendar-container backgrnd">
+		<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%230F4B38&amp;ctz=Africa%2FNairobi" style="border-width:0" width="80%" height="600" frameborder="0" scrolling="no"></iframe>
+	</div>
+	<script type="text/javascript">
+		function navBarResponse() {
+		    var element = document.getElementById("NavBar");
+		    if (element.className === "navbar") {
+		        element.className += " responsive";
+		    } else {
+		        element.className = "navbar";
+		    }
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="CSS/main.css"/>
+
+    <title>Concinnity</title>
+</head>
+
+<body>
+    <h1 align="center">Smith College Outing Club</h1>
+    <div class="navbar" id="NavBar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="calendar.html">Calendar</a>s
+        <a href="concinnity.html">Concinnity</a>
+        <a href="javascript:void(0);" class="icon" onclick="navBarResponse()">
+            <i class="fa fa-bars"></i>
+         </a>   
+    </div>
+    <!---->
+        <div class="slideshow-container rounded backgrnd">
+            <img class="myPhotos" src="img/1.JPG" style="width: 100%">
+            <img class="myPhotos" src="img/2.JPG" style="width: 100%">
+            <img class="myPhotos" src="img/3.JPG" style="width: 100%">
+            <img class="myPhotos" src="img/4.JPG" style="width: 100%">
+            <img class="myPhotos" src="img/5.JPG" style="width: 100%">
+            <img class="myPhotos" src="img/6.JPG" style="width: 100%">
+            <img class="myPhotos" src="img/7.JPG" style="width: 100%">
+            <img class="myPhotos" src="img/8.JPG" style="width: 100%">
+
+            <a class="prev" onclick="plusPhotos(-1)">&#10094;</a>
+            <a class="next" onclick="plusPhotos(1)">&#10095;</a>
+        </div>
+    <div class="m-5 text-center backgrnd">
+        <h1 class="section-heading-upper hg">Concinnity</h1>
+        <p>Concinnity is the skillful and harmonious arrangement or fitting together of the different parts of
+            something (Merriam Webster). Basically, it is several working parts existing in harmony, which is what our
+            festival tries to accomplish. We bring people from all backgrounds together at MacLeish Field Station to
+            enjoy art, food, music, and the outdoors. Come join us!</p>
+        <p>This year we will be holding our 2nd annual Concinnity Fest on April 27th (tentatively) at MacLeish Field
+            Station! As always, the event will be free to all Five College students and friends. We will expand from
+            last year’s exhibits with new artists and artwork, ranging from films to photography to music performances
+            and more, all created by students.</p>
+        <p>We also welcome you to play music/showcase your art/film, or CREATE art live at the venue. Transportation,
+            PA system, projector screen, paint etc will be provided for all artists, of all experience levels, forms,
+            and styles. Please email us if you would like to participate!</p>
+    </div>
+    <div class="m-5 text-center pad backgrnd">
+        <h1 class="section-heading-upper hhh">Last Year:</h1>
+        <img  id="jl" src="img/10.JPG" alt="">
+    </div>
+    <script type="text/javascript">
+        function navBarResponse() {
+            var element = document.getElementById("NavBar");
+            if (element.className === "navbar") {
+                element.className += " responsive";
+            } else {
+                element.className = "navbar";
+            }
+        }
+        var slideIndex = 1;
+        showPhotos(slideIndex);
+
+        function plusPhotos(n) {
+          showPhotos(slideIndex += n);
+        }
+        function currentPhoto(n) {
+            showPhotos(slideIndex = n);
+        }
+        function showPhotos(n) {
+          var i;
+          var photo = document.getElementsByClassName("myPhotos");
+          if (n > photo.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = photo.length}
+          for (i = 0; i < photo.length; i++) {
+             photo[i].style.display = "none";  
+          }
+          photo[slideIndex-1].style.display = "block";  
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title> Outing Club</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="stylesheet" href="CSS/main.css"/>
+
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+	<div>
+	<h1 align="center">Smith College Outing Club</h1>
+	<div class="navbar" id="NavBar">
+		<a href="index.html">Home</a>
+		<a href="about.html">About Us</a>
+		<a href="calendar.html">Calendar</a>
+		<a href="concinnity.html">Concinnity</a>
+		<a href="javascript:void(0);" class="icon" onclick="navBarResponse()">
+    		<i class="fa fa-bars"></i>
+ 		 </a>	
+	</div>
+	<div class="text-center backgrnd">
+		<h1>
+			<span class="section-heading-upper hgg">
+				ABOUT US
+			</span>
+			
+		</h1>
+		<p >
+			Outing Club hosts a variety of trips that run the gamut from hiking, to rock climbing, to contra dancing. We focus on events that are accessible to all students, regardless of experience, in an effort to connect members to both the beautiful natural environment and the art and cultural scene in the Pioneer Valley and beyond. We organize a range of outings, from smaller trips such as biking around Northampton, to spending a weekend at a cabin in the mountains, to our annual Concinnity Fest in the spring! Come by a meeting or sign up for a trip to see what we're all about!
+
+			Our goal is to provide outdoors and/or arts and culture oriented activities to students with any level of experience, to connect members to the fun stuff going on in the Pioneer Valley, in New England, and beyond.
+
+		</p>
+		
+	</div>
+
+	<div class="m-5 text-center backgrnd">
+        <h1 class="section-heading-upper abd">General History</h1>
+        <p>Smith Outing Club was first organized in 1922, the first of its sort in woman’s college. It was established
+            to
+            promote interest in outdoor activities and give every Smith student a taste of the excitement found,
+            physically, mentally, and socially, in venturing into the spendolous wilderness within organized groups.
+        </p>
+        <p>The club gained widespread popularity as well as prestige in its early years, acquiring three cabins in the
+            hills surrounding Northampton and becoming “one of the most popular clubs” on campus. Groups used to go up
+            to
+            the cabins every weekend and trips were often organized with nearby colleges such as Amherst, Dartmouth and
+            Yale. Smith Outing Club had been very actively corresponding within Intercollegiate Outing Club Association
+            (IOCA) and organizing annual trips to other colleges’ cabin for an outing weekend. Activities typically
+            included biking, hiking, snowshoeing, skiing, square dancing, freshmen dinners, New England Outing Club
+            Conferences, ski meets, and an annual strawberry festival. </p>
+        <p>During the war, the club seems to have dropped into the background and has since been alternatively active
+            or
+            inactive. There was also a swing of leadership, depending on the year, that resulted in two of the club’s
+            cabins being sold and the third one burned during an inactive period from 1954 to 1967. </p>
+        <p>The club came back to life with a boom of enthusiasm with old traditions being reinstated and new ones
+            formed in
+            the year of 1976. The passionate members had created traditions like Pumpkin and Cider Sale, Beer and
+            Volleyball Afternoon, Moonlight Skiing/skating with Hot Chocolate, Films and Lectures, Bike Racing, Bike in
+            India, Skiing trips in Italy, </p>
+        <p>However, the wish of owning a new cabin was never accomplished during this period. </p>
+    </div>
+          <!---->
+        <div class="slideshow-container rounded backgrnd">
+            <img class="myPhotos" src="img/his1.JPG" style="width: 100%">
+            <img class="myPhotos" src="img/his2.JPG" style="width: 100%">
+            <img class="myPhotos" src="img/his3.JPG" style="width: 100%">
+            <img class="myPhotos" src="img/his4.JPG" style="width: 100%">
+            <img class="myPhotos" src="img/his5.JPG" style="width: 100%">
+            <img class="myPhotos" src="img/his6.JPG" style="width: 100%">
+            <img class="myPhotos" src="img/his7.JPG" style="width: 100%">
+            <img class="myPhotos" src="about/img1.jpg" style="width: 80%">
+			<img class="myPhotos" src="about/img2.jpg" style="width: 100%">
+			<img class="myPhotos" src="about/img3.jpg" style="width: 100%">
+			<img class="myPhotos" src="about/img4.jpg" style="width: 100%">
+			<img class="myPhotos" src="about/img5.jpg" style="width: 100%">
+			<img class="myPhotos" src="about/img6.jpg" style="width: 100%">
+			<img class="myPhotos" src="about/img7.jpg" style="width: 100%">
+			<img class="myPhotos" src="about/img8.jpg" style="width: 100%">
+			<img class="myPhotos" src="about/img9.jpg" style="width: 100%">
+			<img class="myPhotos" src="about/img10.jpg" style="width: 100%">
+
+            <a class="prev" onclick="plusPhotos(-1)">&#10094;</a>
+            <a class="next" onclick="plusPhotos(1)">&#10095;</a>
+        </div>
+    <div class="m-5 text-center backgrnd">
+        <h1 class="section-heading-upper">Key Events</h1>
+        <ol>
+            <li><a href="concinnity.html">Conncinity Festival</a></li>
+            <li>Collaborative trips with Unity Orgs</li>
+            <li>Five-College Winter Hiking, Cabin stays</li>
+            <li>Family Weekend S’mores</li>
+        </ol>
+    </div>
+	<script type="text/javascript">
+		function navBarResponse() {
+		    var element = document.getElementById("NavBar");
+		    if (element.className === "navbar") {
+		        element.className += " responsive";
+		    } else {
+		        element.className = "navbar";
+		    }
+		}
+		var slideIndex = 1;
+		showPhotos(slideIndex);
+
+		function plusPhotos(n) {
+		  showPhotos(slideIndex += n);
+		}
+		function currentPhoto(n) {
+  			showPhotos(slideIndex = n);
+		}
+		function showPhotos(n) {
+		  var i;
+		  var photo = document.getElementsByClassName("myPhotos");
+		  if (n > photo.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = photo.length}
+		  for (i = 0; i < photo.length; i++) {
+		     photo[i].style.display = "none";  
+		  }
+		  photo[slideIndex-1].style.display = "block";  
+		}
+	</script>
+</body>
+</html>
